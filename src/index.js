@@ -7,6 +7,10 @@ const path = require("path");
 app.use(express.json())
 app.use(cors())
 
+
+const Product = require("./models/product.model");
+const ApiFeatures = require("./utils/apifeatures");
+
 const registerController = require('./controllers/register.controller');
 const loginController = require('./controllers/login.controller');
 const cartController = require('./controllers/Cart.controller');
