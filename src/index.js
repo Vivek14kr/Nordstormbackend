@@ -95,23 +95,13 @@ app.post("/products/", async (req, res) => {
 
 app.get("/products/", async (req, res) => {
   try {
-    const resultPerPage = 24;
-    const productsCount = await Product.countDocuments();
 
-    const apiFeature = new ApiFeatures(Product.find(), req.query)
-      .search()
-      .filter()
-      .pagination(resultPerPage);
 
-    let products = await apiFeature.query;
-
-    let filteredProductsCount = products.length;
+    let products = await Product.find({});
 
     res.status(200).json({
-      products,
-      productsCount,
-      resultPerPage,
-      filteredProductsCount,
+      products
+    
     });
   } catch (e) {
     return res.status(500).json({ status: "Failled", message: e.message });
