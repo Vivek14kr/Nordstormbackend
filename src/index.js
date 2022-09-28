@@ -10,7 +10,7 @@ app.use(cors())
 const registerController = require('./controllers/register.controller');
 const loginController = require('./controllers/login.controller');
 const cartController = require('./controllers/Cart.controller');
-const productController = require('./controllers/product.controller');
+const productController = require('./controllers/Product.controller');
 
 app.use('/register', registerController);
 app.use('/login', loginController);
