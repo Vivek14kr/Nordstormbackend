@@ -2,7 +2,7 @@
   "name": "nordstrom-clone",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/server.js",
+"main": "index.js",
   "engines": {
     "node": "14.15.4"
   },
